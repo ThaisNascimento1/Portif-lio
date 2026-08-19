@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        body {
+           background-image: url(imagem/fundo4.png);
+            background-position: center center;
+        }
+    </style>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+
+    <nav class="navegação">
+        <ul class="menu">
+            <li>
+                <a href="#Inicio" class="-menu-link"> Inicio</a>
+            </li>
+            <li>
+                <a href="#Sobre-mim" class="-menu-link">Sobre mim</a>
+            </li>
+            <li>
+                <a href="#Projetos" class="-menu-link"> Projetos</a>
+            </li>
+            <li>
+                <a href="#Contatos" class="-menu-link"> Contatos</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <main id="Inicio" class="cabeçalho ">
+
+        <img src="imagem/foto-thais.jpg.jpg" alt="foto-thais" class="foto-thais">
+        <h1>Thais Nascimento</h1>
+        <p class="paragrafo"></p>
+        <p class="frase-inicio">
+            Transformando ideias em experiências digitais.
+        </p>
+
+    </main>
+
+    <section id="Sobre-mim">
+
+        <h2 class="sobre-titulo efeito-para-rolagem2">
+            Sobre mim
+        </h2>
+
+        <div class="sobre-interativo">
+
+            <div class="sobre-opcoes efeito-para-rolagem2">
+
+                <button class="sobre-item ativo" data-conteudo="sobre">
+                    Sobre mim
+                </button>
+
+                <button class="sobre-item" data-conteudo="habilidades">
+                    Habilidades
+                </button>
+
+                <button class="sobre-item" data-conteudo="formacao">
+                    Formação
+                </button>
+
+                <button class="sobre-item" data-conteudo="interesses">
+                    Interesses
+                </button>
+
+                <button class="sobre-item" data-conteudo="objetivos">
+                    Objetivos
+                </button>
+
+            </div>
+
+
+            <div class="sobre-informacoes efeito-para-rolagem2">
+
+                <div class="informacao ativa" id="sobre">
+
+                    <h3>Sobre mim</h3>
+
+                    <p>
+                        Me chamo Thais, tenho 24 anos e estou construindo minha trajetória na área de tecnologia. Sou
+                        uma pessoa dedicada, curiosa e gosto de aprender coisas novas. No meu dia a dia, busco
+                        desenvolver meus conhecimentos e transformar o que aprendo em projetos e experiências práticas.
+                    </p>
+
+                </div>
+
+
+                <div class="informacao" id="habilidades">
+
+                    <h3>Habilidades</h3>
+
+                    <p>
+                        HTML, CSS, JavaScript, desenvolvimento Front-End e interfaces responsivas. Atualmente,
+                        aprimorando conhecimentos em Back-End.
+                    </p>
+
+                </div>
+
+
+                <div class="informacao" id="formacao">
+
+                    <h3>Formação</h3>
+
+                    <p>
+                        Cursando Análise e Desenvolvimento de Sistemas.
+                    </p>
+
+                </div>
+
+
+                <div class="informacao" id="interesses">
+
+                    <h3>Interesses</h3>
+
+                    <p>
+                        Desenvolvimento Web, Front-End, Back-End, APIs, banco de dados e novas tecnologias.
+                    </p>
+
+                </div>
+
+
+                <div class="informacao" id="objetivos">
+
+                    <h3>Objetivos</h3>
+
+                    <p>
+                        Aprimorar meus conhecimentos, desenvolver projetos e conquistar uma oportunidade profissional na
+                        área de tecnologia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section id="Contatos" class="Contatos efeito-para-rolagem">
+        <div class="interface">
+
+            <h2 class="contatos-titulo">Entre em contato</h2>
+
+            <form id="formContato">
+
+                <input type="text" id="nome" placeholder="Seu nome:" required>
+
+                <textarea id="mensagem" placeholder="Sua mensagem:" required></textarea>
+
+                <div class="btn-enviar">
+                    <input type="submit" value="Enviar">
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+
+
+
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <!-- LADO ESQUERDO -->
+            <div class="rodape-info">
+
+                <h2>Thais Nascimento</h2>
+
+                <p>Desenvolvedora Front-End</p>
+
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thais.tp70@gmail.com" target="_blank"
+                    class="email">
+                    <i class="fa-regular fa-envelope"></i>
+                    thais.tp70@gmail.com
+                </a>
+
+            </div>
+
+
+            <!-- LADO DIREITO -->
+            <div class="rodape-redes">
+
+                <a href="https://github.com/ThaisNascimento1" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/thais-de-paiva-do-nascimento-068278206/" target="_blank"
+                    aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://wa.me/5521968244513" target="_blank" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- LINHA -->
+        <div class="linha-rodape"></div>
+
+
+        <!-- COPYRIGHT -->
+        <small>
+            © 2026 Thais Nascimento
+        </small>
+
+    </footer>
+
+
+
+</body>
+
+
+
+
+</html>

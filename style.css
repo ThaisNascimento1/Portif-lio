@@ -1,0 +1,859 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.efeito-para-rolagem,
+.efeito-para-rolagem2 {
+    visibility: hidden;
+
+}
+
+:root {
+
+    --preto: #020102;
+    --rosa: rgb(192, 18, 114);
+    --rosa-claro: #cc9cc2;
+    --rosa-escuro: #747072;
+    --rosa-mais-claro: #e9d8e5;
+    --branco: #fff;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--rosa-claro);
+
+}
+
+
+
+
+
+.navegação {
+    position: fixed;
+    top: 0;
+    background: rgba(216, 3, 145, 0.5);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+
+}
+
+.-menu-link {
+    text-decoration: none;
+    color: var(--rosa-mais-claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+
+.-menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--rosa-mais-claro);
+    transition: width 0.5s ease;
+}
+
+.-menu-link:hover::after {
+    width: 100%;
+}
+
+.cabeçalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.foto-thais {
+    margin-top: 90px;
+    box-shadow: 0px 0 30px var(--rosa);
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 0 20px rgba(216, 3, 145, 0.8);
+    border-radius: 50%;
+    border: 1px solid var(--rosa);
+    animation: flutuar 5s ease-in-out infinite;
+    border-bottom: 0.7%;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    color: var(--rosa-claro);
+    font-weight: 600;
+    margin: 30px 20px 5px;
+}
+
+.paragrafo {
+
+    font-size: 1.5rem;
+    color: var(--rosa);
+    margin-top: 0;
+    text-shadow:
+        0 0 5px var(--rosa),
+        0 0 7px var(--rosa);
+}
+
+.paragrafo::after {
+    content: "|";
+    color: var(--rosa);
+    animation: piscar 0.7s infinite;
+}
+
+@keyframes piscar {
+    50% {
+        opacity: 0;
+    }
+}
+
+.frase-inicio {
+    font-family: 'Lora', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 45px;
+
+    font-size: 1.20rem;
+    font-weight: 400;
+    color: var(--rosa-mais-claro);
+    text-align: center;
+    line-height: 1.6;
+
+    text-shadow: 0 0 8px rgba(192, 18, 114, 0.5);
+}
+
+.frase-inicio::before {
+    content: "— ◆";
+    color: var(--rosa);
+    font-size: 12px;
+    text-shadow: 0 0 8px var(--rosa);
+}
+
+.frase-inicio::after {
+    content: "◆ —";
+    color: var(--rosa);
+    font-size: 12px;
+    text-shadow: 0 0 8px var(--rosa);
+}
+
+
+/* SEÇÃO SOBRE MIM */
+
+#Sobre-mim {
+    width: 100%;
+    min-height: 0;
+
+    padding: 80px 10% 50px;
+
+    background: #8F245C
+}
+
+/* TÍTULO */
+
+.sobre-titulo {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    color: #FFFFFF;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    margin: 0 0 80px;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.25),
+        0 0 18px rgba(192, 18, 114, 0.6);
+}
+
+.sobre-titulo::before,
+.sobre-titulo::after {
+    color: #FFEAF5;
+
+    font-size: 14px;
+
+    text-shadow:
+        0 0 6px var(--rosa),
+        0 0 12px var(--rosa);
+}
+
+.sobre-titulo::before {
+    content: "✦";
+}
+
+.sobre-titulo::after {
+    content: "✦";
+}
+
+/* ÁREA PRINCIPAL DO SOBRE MIM */
+
+.sobre-interativo {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 280px 1fr;
+
+    gap: 120px;
+
+    align-items: center;
+}
+
+
+/* LADO ESQUERDO */
+
+.sobre-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-end;
+}
+
+
+/* TÍTULOS */
+
+.sobre-item {
+    position: relative;
+
+    background: transparent;
+    border: none;
+
+    color: #FFEAF5;
+
+    font-size: 1.15rem;
+
+    text-align: right;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+/* QUANDO PASSAR O MOUSE */
+
+.sobre-item:hover {
+    color: #FFFFFF;
+
+    transform: translateX(-5px);
+
+    text-shadow:
+        0 0 6px var(--rosa),
+        0 0 12px var(--rosa);
+}
+
+
+/* TÍTULO SELECIONADO */
+
+.sobre-item.ativo {
+    color: #FFFFFF;
+
+    transform: translateX(-8px);
+
+    text-shadow:
+        0 0 5px var(--rosa),
+        0 0 10px var(--rosa),
+        0 0 20px var(--rosa);
+}
+
+
+/* LINHA DO TÍTULO SELECIONADO */
+
+.sobre-item.ativo::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    right: -50px;
+
+    width: 50px;
+    height: 2px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 0 5px var(--rosa),
+        0 0 10px var(--rosa);
+
+    animation: linhaAparecer 0.5s ease;
+}
+
+/* ÁREA DAS INFORMAÇÕES */
+
+.sobre-informacoes {
+    position: relative;
+
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* INFORMAÇÕES */
+
+.informacao {
+    position: absolute;
+
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(20px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+
+.informacao.ativa {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(0);
+}
+
+
+/* TÍTULO DA INFORMAÇÃO */
+
+.informacao h3 {
+    color: #FFFFFF;
+
+    font-size: 1.7rem;
+
+    margin-bottom: 20px;
+
+    font-weight: 600;
+
+    text-shadow:
+        0 0 6px var(--rosa),
+        0 0 14px rgba(192, 18, 114, 0.7);
+}
+
+
+/* TEXTO */
+
+.informacao p {
+    color: #FFEAF5;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+}
+
+
+/* ANIMAÇÃO DA LINHA */
+@keyframes linhaAparecer {
+
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 50px;
+        opacity: 1;
+    }
+
+}
+
+.sobre-item::before {
+    content: "✦";
+
+    position: absolute;
+
+    left: -25px;
+
+    color: #FFEAF5;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+section.contatos {
+    padding: 80px 4%;
+}
+
+.contatos-titulo {
+    margin-top: 70px;
+    font-family: 'Lora', serif;
+    ;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Campos do formulário */
+form input,
+form textarea {
+    width: 100%;
+    box-shadow: 0px 0 10px var(--rosa);
+    background-color: #0201025b;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 15px;
+    outline: 0;
+    padding: 16px 13px;
+    transition: 0.3s;
+}
+
+form textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Área do botão */
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/* Botão */
+form .btn-enviar input {
+    width: 120px;
+    padding: 12px 20px;
+    background-color: var(--rosa);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Mouse em cima */
+form .btn-enviar input:hover {
+    transform: scale(1.05);
+}
+
+/* Clique */
+form .btn-enviar input:active {
+    transform: scale(0.90);
+
+}
+
+
+/* para sumir a mensagem quando digitar*/
+form input::placeholder {
+    color: var(--rosa-mais-claro);
+}
+
+form textarea::placeholder {
+    color: var(--rosa-mais-claro);
+}
+
+form input:hover,
+form textarea:hover {
+    border-color: var(--rosa-mais-claro);
+}
+
+.efeito-fundo {
+    position: fixed;
+    background: radial-gradient(circle, var(--rosa), transparent);
+}
+
+.rolagem {
+    background-position: 100% 0%;
+    transition: 5s;
+}
+
+.rolagem:hover {
+    background-position: 100% 100%;
+}
+
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+
+.rodape {
+    width: 100%;
+
+    background: #8F245C;
+
+    padding: 35px 8% 20px;
+
+    color: #FFFFFF;
+}
+
+
+/* CONTEÚDO */
+
+.rodape-conteudo {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* INFORMAÇÕES */
+
+.rodape-info h2 {
+    font-size: 1.4rem;
+
+    margin-bottom: 5px;
+
+    font-weight: 600;
+}
+
+.rodape-info p {
+    color: #FFEAF5;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 8px;
+}
+
+.email {
+    color: #FFFFFF;
+
+    font-size: 0.85rem;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.email:hover {
+    color: #FFEAF5;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+
+/* REDES SOCIAIS */
+
+.rodape-redes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.rodape-redes a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 50%;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.rodape-redes a:hover {
+    background: #FFFFFF;
+
+    color: #8F245C;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+/* LINHA */
+
+.linha-rodape {
+    max-width: 1100px;
+
+    height: 1px;
+
+    margin: 25px auto 15px;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* COPYRIGHT */
+
+.rodape small {
+    display: block;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 0.7rem;
+}
+
+@media (max-width: 600px) {
+
+    /* MENU */
+    .navegação {
+        padding: 1rem;
+    }
+
+    .menu {
+        gap: 1.3rem;
+    }
+
+    .-menu-link {
+        font-size: 0.85rem;
+    }
+
+
+    /* FOTO */
+    .foto-thais {
+        width: 190px;
+        height: 190px;
+    }
+
+
+    /* NOME */
+    h1 {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+
+    /* PROFISSÃO */
+    .paragrafo {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+
+    /* FRASE */
+    .frase-inicio {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+
+    /* SOBRE MIM */
+    #Sobre-mim {
+        padding: 60px 6% 50px;
+    }
+
+    .sobre-titulo {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    .sobre-interativo {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+
+    /* TÍTULOS */
+    .sobre-opcoes {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sobre-item {
+        text-align: center;
+    }
+
+
+    /* LINHA DO TÍTULO ATIVO */
+    .sobre-item.ativo::after {
+        right: -30px;
+        width: 30px;
+    }
+
+
+    /* INFORMAÇÕES */
+    .sobre-informacoes {
+        min-height: 250px;
+        width: 100%;
+    }
+
+    .informacao p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+
+    /* CONTATOS */
+    section.contatos {
+        padding: 60px 6%;
+    }
+
+    .contatos-titulo {
+        font-size: 26px;
+        margin-top: 30px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+
+    /* RODAPÉ */
+    .rodape {
+        padding: 30px 6% 20px;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .rodape-redes {
+        justify-content: center;
+    }
+
+    .rodape-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .rodape-info p,
+    .email {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .menu {
+        gap: 2rem;
+    }
+
+    .foto-thais {
+        width: 220px;
+        height: 220px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .sobre-interativo {
+        grid-template-columns: 220px 1fr;
+        gap: 60px;
+    }
+
+    .sobre-item.ativo::after {
+        right: -40px;
+        width: 40px;
+    }
+
+    #Sobre-mim {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+}
+@media (max-width: 400px) {
+
+    .menu {
+        gap: 0.8rem;
+    }
+
+    .-menu-link {
+        font-size: 0.75rem;
+    }
+
+    .foto-thais {
+        width: 170px;
+        height: 170px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .sobre-titulo {
+        font-size: 28px;
+    }
+
+    .sobre-item {
+        font-size: 1rem;
+    }
+
+}
